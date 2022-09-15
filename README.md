@@ -1,7 +1,6 @@
-# notyf
+<p align="center"><img src="screenshot.png" alt="notyf"></p>
 
 Paket flash message sederhana berbasis [notyf-js](https://github.com/ardalanamini/notyf) untuk rakit framework.
-<img src="screenshot.png" style="display: inline; margin: 0 5px;">
 
 ## Instalasi
 Jalankan perintah ini via rakit console:
