@@ -1,7 +1,7 @@
 {
     "name": "esyede/notyf",
     "description": "Paket flash message sederhana berbasis notyf-js untuk rakit framework.",
-    "keywords": ["notyf", "flash", "notification", rakit", "framework"],
+    "keywords": ["notyf", "flash", "notification", "rakit", "framework"],
     "homepage": "https://github.com/esyede/notyf",
     "type": "library",
     "license": "MIT",
