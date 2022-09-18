@@ -36,3 +36,4 @@
 /.php_cs           export-ignore
 *.phar             export-ignore
 *.pem              export-ignore
+/screenshot.png    export-ignore
