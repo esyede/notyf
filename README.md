@@ -57,7 +57,7 @@ class Balance_Controller extends Base_Controller
 Anda dapat memodifikasi beberapa aspek dari library ini:
 
 ```php
-Notyf::($dismissible = false, $duration = 2000, $position = 'right_top', $ripple = true);
+Notyf::config($duration = 2000, $dismissible = false, $position = 'right_top', $ripple = true)
 // Notyf::success('Saldo berhasil ditambahkan');
 ```
 
@@ -73,9 +73,15 @@ Dimana parameter konfigurasi dijelaskan pada tabel berikut:
 
 **Opsi tersedia untuk position:**
 
-`right_top` `right_center` `right_bottom`
-`left_top` `left_center` `left_bottom`
-`center_top` `center_center` `center_bottom`
+  - `right_top`
+  - `right_center`
+  - `right_bottom`
+  - `left_top`
+  - `left_center`
+  - `left_bottom`
+  - `center_top`
+  -  `center_center`
+  - `center_bottom`
 
 
 ## Lisensi
