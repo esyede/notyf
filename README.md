@@ -58,7 +58,7 @@ Anda dapat memodifikasi beberapa aspek dari library ini:
 
 ```php
 Notyf::config($duration = 2000, $dismissible = false, $position = 'right_top', $ripple = true)
-// Notyf::success('Saldo berhasil ditambahkan');
+Notyf::success('Saldo berhasil ditambahkan');
 ```
 
 Dimana parameter konfigurasi dijelaskan pada tabel berikut:
