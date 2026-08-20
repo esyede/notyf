@@ -103,6 +103,21 @@ class Notyf
     }
 
     /**
+     * Encode a value so it is safe to embed inside a script tag.
+     *
+     * @param mixed $value
+     *
+     * @return string
+     */
+    protected static function encode($value)
+    {
+        $flags = JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT;
+        $json = json_encode($value, $flags);
+
+        return (false === $json) ? '""' : $json;
+    }
+
+    /**
      * Get notyf JS tag.
      *
      * @return string
@@ -117,10 +132,10 @@ class Notyf
             $config->position = (object) ['x' => $positions[0], 'y' => $positions[1]];
 
             $type = Session::get('notyf.level');
-            $config = json_encode($config);
-            $message = str_replace('`', '\\`', Session::get('notyf.message'));
-            $content .= sprintf('<script type="text/javascript">const notyf=new Notyf(%s);notyf.%s(`%s`);</script>%s',
-                $config, $type, $message, PHP_EOL
+            $type = in_array($type, ['success', 'error'], true) ? $type : 'success';
+
+            $content .= sprintf('<script type="text/javascript">var notyf=new Notyf(%s);notyf.%s(%s);</script>%s',
+                static::encode($config), $type, static::encode(Session::get('notyf.message')), PHP_EOL
             );
         }
 
